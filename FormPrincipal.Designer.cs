@@ -32,7 +32,6 @@
             menuStrip1 = new MenuStrip();
             cadastroToolStripMenuItem = new ToolStripMenuItem();
             carnesToolStripMenuItem = new ToolStripMenuItem();
-            kitsToolStripMenuItem = new ToolStripMenuItem();
             sairToolStripMenuItem = new ToolStripMenuItem();
             tabelaDeKitsToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
@@ -45,42 +44,37 @@
             // menuStrip1
             // 
             menuStrip1.BackColor = Color.FromArgb(198, 0, 5);
+            menuStrip1.ImageScalingSize = new Size(24, 24);
             menuStrip1.Items.AddRange(new ToolStripItem[] { cadastroToolStripMenuItem, sairToolStripMenuItem, tabelaDeKitsToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 26);
+            menuStrip1.Padding = new Padding(9, 3, 0, 3);
+            menuStrip1.Size = new Size(1143, 38);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
-            menuStrip1.ItemClicked += menuStrip1_ItemClicked;
             // 
             // cadastroToolStripMenuItem
             // 
-            cadastroToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { carnesToolStripMenuItem, kitsToolStripMenuItem });
+            cadastroToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { carnesToolStripMenuItem });
             cadastroToolStripMenuItem.Font = new Font("Verdana", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cadastroToolStripMenuItem.ForeColor = SystemColors.ButtonHighlight;
             cadastroToolStripMenuItem.Name = "cadastroToolStripMenuItem";
-            cadastroToolStripMenuItem.Size = new Size(94, 22);
+            cadastroToolStripMenuItem.Size = new Size(142, 32);
             cadastroToolStripMenuItem.Text = "Cadastro";
             // 
             // carnesToolStripMenuItem
             // 
             carnesToolStripMenuItem.Name = "carnesToolStripMenuItem";
-            carnesToolStripMenuItem.Size = new Size(133, 22);
+            carnesToolStripMenuItem.Size = new Size(270, 36);
             carnesToolStripMenuItem.Text = "Carnes";
             carnesToolStripMenuItem.Click += carnesToolStripMenuItem_Click;
-            // 
-            // kitsToolStripMenuItem
-            // 
-            kitsToolStripMenuItem.Name = "kitsToolStripMenuItem";
-            kitsToolStripMenuItem.Size = new Size(133, 22);
-            kitsToolStripMenuItem.Text = "Kits";
             // 
             // sairToolStripMenuItem
             // 
             sairToolStripMenuItem.Font = new Font("Verdana", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             sairToolStripMenuItem.ForeColor = SystemColors.ButtonHighlight;
             sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            sairToolStripMenuItem.Size = new Size(52, 22);
+            sairToolStripMenuItem.Size = new Size(78, 32);
             sairToolStripMenuItem.Text = "Sair";
             sairToolStripMenuItem.Click += sairToolStripMenuItem_Click;
             // 
@@ -89,7 +83,7 @@
             tabelaDeKitsToolStripMenuItem.Font = new Font("Verdana", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             tabelaDeKitsToolStripMenuItem.ForeColor = SystemColors.ButtonHighlight;
             tabelaDeKitsToolStripMenuItem.Name = "tabelaDeKitsToolStripMenuItem";
-            tabelaDeKitsToolStripMenuItem.Size = new Size(134, 22);
+            tabelaDeKitsToolStripMenuItem.Size = new Size(207, 32);
             tabelaDeKitsToolStripMenuItem.Text = "Tabela de kits";
             tabelaDeKitsToolStripMenuItem.Click += tabelaDeKitsToolStripMenuItem_Click;
             // 
@@ -97,9 +91,10 @@
             // 
             panel1.Controls.Add(pictureBox1);
             panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 26);
+            panel1.Location = new Point(0, 38);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 424);
+            panel1.Size = new Size(1143, 712);
             panel1.TabIndex = 1;
             // 
             // pictureBox1
@@ -108,23 +103,25 @@
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Margin = new Padding(4, 5, 4, 5);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(800, 424);
+            pictureBox1.Size = new Size(1143, 712);
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // FormPrincipal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1143, 750);
             Controls.Add(panel1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(4, 5, 4, 5);
             Name = "FormPrincipal";
-            Text = "FormPrincipal";
+            Text = "Carne Nobre - Inicio";
             WindowState = FormWindowState.Maximized;
             Load += FormPrincipal_Load;
             menuStrip1.ResumeLayout(false);
@@ -140,7 +137,6 @@
         private MenuStrip menuStrip1;
         private ToolStripMenuItem cadastroToolStripMenuItem;
         private ToolStripMenuItem carnesToolStripMenuItem;
-        private ToolStripMenuItem kitsToolStripMenuItem;
         private ToolStripMenuItem sairToolStripMenuItem;
         private Panel panel1;
         private PictureBox pictureBox1;

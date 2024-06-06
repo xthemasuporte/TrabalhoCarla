@@ -16,44 +16,18 @@ namespace WinFormsApp1
         public Form2()
         {
             InitializeComponent();
-            
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
-        {
+        {//passando as informaçoes constantes para login e checkando 
             if (txtEmail.Text == "admin@carnenobre.com.br" && txtSenha.Text == "admin")
-            {
+            {//Se as informações forem corretas o form de login sera fechado e login sera efetuado
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
-            {
+            {//Se nao, aparecera uma caixa de dialogo informado o erro 
                 MessageBox.Show("Usuario/Senha Inválido", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-         
-
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form2_Load(object sender, EventArgs e)
-        {
-            
-
         }
     }
 }
