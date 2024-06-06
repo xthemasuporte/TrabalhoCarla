@@ -57,22 +57,22 @@
             // 
             // contextMenuStrip1
             // 
+            contextMenuStrip1.ImageScalingSize = new Size(24, 24);
             contextMenuStrip1.Items.AddRange(new ToolStripItem[] { toolStripMenuItem1, toolStripMenuItem2 });
             contextMenuStrip1.Name = "contextMenuStrip1";
-            contextMenuStrip1.Size = new Size(120, 48);
-            contextMenuStrip1.Click += contextMenuStrip1_Click;
+            contextMenuStrip1.Size = new Size(152, 68);
             // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(119, 22);
+            toolStripMenuItem1.Size = new Size(151, 32);
             toolStripMenuItem1.Text = "EDITAR";
             toolStripMenuItem1.Click += toolStripMenuItem1_Click;
             // 
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(119, 22);
+            toolStripMenuItem2.Size = new Size(151, 32);
             toolStripMenuItem2.Text = "EXCLUIR";
             toolStripMenuItem2.Click += toolStripMenuItem2_Click;
             // 
@@ -83,8 +83,9 @@
             panel1.Controls.Add(label3);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 58);
+            panel1.Size = new Size(1143, 97);
             panel1.TabIndex = 9;
             // 
             // label4
@@ -93,13 +94,13 @@
             label4.Dock = DockStyle.Bottom;
             label4.Font = new Font("Verdana", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = SystemColors.ControlLightLight;
-            label4.Location = new Point(0, 35);
+            label4.Location = new Point(0, 59);
+            label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
-            label4.Size = new Size(800, 23);
+            label4.Size = new Size(1143, 38);
             label4.TabIndex = 12;
             label4.Text = "Lista de Carnes";
             label4.TextAlign = ContentAlignment.MiddleLeft;
-            label4.Click += label4_Click;
             // 
             // label3
             // 
@@ -108,8 +109,9 @@
             label3.Font = new Font("Verdana", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Transparent;
             label3.Location = new Point(0, 0);
+            label3.Margin = new Padding(4, 0, 4, 0);
             label3.Name = "label3";
-            label3.Size = new Size(800, 31);
+            label3.Size = new Size(1143, 52);
             label3.TabIndex = 7;
             label3.Text = "Painel de Gerenciamento de Recursos";
             label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -119,9 +121,10 @@
             panel2.Controls.Add(dataGridView1);
             panel2.Controls.Add(panel3);
             panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(0, 58);
+            panel2.Location = new Point(0, 97);
+            panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(800, 392);
+            panel2.Size = new Size(1143, 653);
             panel2.TabIndex = 10;
             // 
             // dataGridView1
@@ -136,13 +139,14 @@
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.GridColor = Color.FromArgb(234, 234, 234);
             dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Margin = new Padding(4, 5, 4, 5);
             dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
+            dataGridView1.RowHeadersWidth = 62;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dataGridView1.Size = new Size(800, 336);
+            dataGridView1.Size = new Size(1143, 560);
             dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick_2;
             dataGridView1.MouseDown += dataGridView1_MouseDown;
             // 
             // Column1
@@ -153,6 +157,7 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(198, 0, 5);
             Column1.DefaultCellStyle = dataGridViewCellStyle1;
             Column1.HeaderText = "Codigo";
+            Column1.MinimumWidth = 8;
             Column1.Name = "Column1";
             Column1.ReadOnly = true;
             // 
@@ -162,6 +167,7 @@
             dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(198, 0, 5);
             Column2.DefaultCellStyle = dataGridViewCellStyle2;
             Column2.HeaderText = "Nome";
+            Column2.MinimumWidth = 8;
             Column2.Name = "Column2";
             Column2.ReadOnly = true;
             // 
@@ -171,6 +177,7 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(198, 0, 5);
             Column3.DefaultCellStyle = dataGridViewCellStyle3;
             Column3.HeaderText = "Quantidade";
+            Column3.MinimumWidth = 8;
             Column3.Name = "Column3";
             Column3.ReadOnly = true;
             // 
@@ -180,6 +187,7 @@
             dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(198, 0, 5);
             Column4.DefaultCellStyle = dataGridViewCellStyle4;
             Column4.HeaderText = "Observação";
+            Column4.MinimumWidth = 8;
             Column4.Name = "Column4";
             Column4.ReadOnly = true;
             // 
@@ -187,17 +195,19 @@
             // 
             panel3.Controls.Add(button1);
             panel3.Dock = DockStyle.Bottom;
-            panel3.Location = new Point(0, 336);
+            panel3.Location = new Point(0, 560);
+            panel3.Margin = new Padding(4, 5, 4, 5);
             panel3.Name = "panel3";
-            panel3.Size = new Size(800, 56);
+            panel3.Size = new Size(1143, 93);
             panel3.TabIndex = 11;
             // 
             // button1
             // 
             button1.Font = new Font("Verdana", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(3, 0);
+            button1.Location = new Point(4, 0);
+            button1.Margin = new Padding(4, 5, 4, 5);
             button1.Name = "button1";
-            button1.Size = new Size(151, 23);
+            button1.Size = new Size(216, 38);
             button1.TabIndex = 0;
             button1.Text = "Cadastrar Carne";
             button1.UseVisualStyleBackColor = true;
@@ -205,12 +215,13 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1143, 750);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";

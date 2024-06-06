@@ -15,7 +15,7 @@ namespace WinFormsApp1
     {
         public ArrayList listaKits;
         public FormKits()
-        {
+        {//passando as informaçoes constantes dos "Kits"
             InitializeComponent();
             listaKits = new ArrayList();
 
@@ -34,28 +34,13 @@ namespace WinFormsApp1
             listaKits.Add("027;Kit Churrasco Nobre 1;3.000 KG;Picanha,Coxao duro,Maminha,Asinha de Frango");
             listaKits.Add("028;Kit Churrasco Nobre 2;4.000 KG;Picado de Frango,Toscana de Frango,Coxinha da Asa");
 
-
+            //para cada linha(kits) na listakits 
             foreach (String kits in listaKits)
-            {
+            {//Cria um array string separando as informações de cada linha(kits) por ;
                 string[] listaKits = kits.Split(';');
+                //Adicionando esse array na tabela
                 dataGridView1.Rows.Add(listaKits);
             }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void FormKits_Load(object sender, EventArgs e)
-        {
-
-
         }
     }
 }

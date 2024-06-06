@@ -56,8 +56,9 @@
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(4, 5, 4, 5);
             panel1.Name = "panel1";
-            panel1.Size = new Size(800, 40);
+            panel1.Size = new Size(1143, 67);
             panel1.TabIndex = 0;
             // 
             // label1
@@ -67,29 +68,31 @@
             label1.Font = new Font("Verdana", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(234, 234, 234);
             label1.Location = new Point(0, 0);
+            label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(800, 40);
+            label1.Size = new Size(1143, 67);
             label1.TabIndex = 0;
             label1.Text = "Tabela de KITS";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            label1.Click += label1_Click;
+            label1.TextAlign = ContentAlignment.MiddleCenter;          
             // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(234, 234, 234);
             panel2.Dock = DockStyle.Bottom;
-            panel2.Location = new Point(0, 398);
+            panel2.Location = new Point(0, 663);
+            panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(800, 52);
+            panel2.Size = new Size(1143, 87);
             panel2.TabIndex = 1;
             // 
             // panel3
             // 
             panel3.Controls.Add(dataGridView1);
             panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(0, 40);
+            panel3.Location = new Point(0, 67);
+            panel3.Margin = new Padding(4, 5, 4, 5);
             panel3.Name = "panel3";
-            panel3.Size = new Size(800, 358);
+            panel3.Size = new Size(1143, 596);
             panel3.TabIndex = 2;
             // 
             // dataGridView1
@@ -123,6 +126,7 @@
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.GridColor = Color.FromArgb(234, 234, 234);
             dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Margin = new Padding(4, 5, 4, 5);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -133,6 +137,7 @@
             dataGridViewCellStyle8.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle8.WrapMode = DataGridViewTriState.True;
             dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridView1.RowHeadersWidth = 62;
             dataGridViewCellStyle9.BackColor = Color.FromArgb(234, 234, 234);
             dataGridViewCellStyle9.ForeColor = Color.White;
             dataGridViewCellStyle9.SelectionBackColor = Color.DimGray;
@@ -142,9 +147,9 @@
             dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = Color.Black;
             dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = Color.FromArgb(198, 0, 5);
             dataGridView1.RowTemplate.DefaultCellStyle.SelectionForeColor = Color.White;
-            dataGridView1.Size = new Size(800, 358);
+            dataGridView1.Size = new Size(1143, 596);
             dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+          
             // 
             // codigo
             // 
@@ -153,6 +158,7 @@
             dataGridViewCellStyle3.SelectionBackColor = Color.DimGray;
             codigo.DefaultCellStyle = dataGridViewCellStyle3;
             codigo.HeaderText = "Codigo";
+            codigo.MinimumWidth = 8;
             codigo.Name = "codigo";
             codigo.ReadOnly = true;
             // 
@@ -162,6 +168,7 @@
             dataGridViewCellStyle4.ForeColor = Color.Black;
             nome.DefaultCellStyle = dataGridViewCellStyle4;
             nome.HeaderText = "Nome";
+            nome.MinimumWidth = 8;
             nome.Name = "nome";
             nome.ReadOnly = true;
             // 
@@ -172,6 +179,7 @@
             dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(198, 0, 5);
             quantidade.DefaultCellStyle = dataGridViewCellStyle5;
             quantidade.HeaderText = "Quantidade";
+            quantidade.MinimumWidth = 8;
             quantidade.Name = "quantidade";
             quantidade.ReadOnly = true;
             // 
@@ -183,21 +191,25 @@
             dataGridViewCellStyle6.SelectionBackColor = Color.FromArgb(198, 0, 5);
             itens.DefaultCellStyle = dataGridViewCellStyle6;
             itens.HeaderText = "Itens";
+            itens.MinimumWidth = 8;
             itens.Name = "itens";
             itens.ReadOnly = true;
             itens.Resizable = DataGridViewTriState.True;
             // 
             // FormKits
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1143, 750);
             Controls.Add(panel3);
             Controls.Add(panel2);
             Controls.Add(panel1);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "FormKits";
-            Text = "FormKits";
-            Load += FormKits_Load;
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Carne Nobre - Kits";
+            WindowState = FormWindowState.Maximized;
+            
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
